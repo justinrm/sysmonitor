@@ -37,7 +37,7 @@ This script monitors various system metrics at regular intervals and detects ano
 | `--net_error_threshold`| Network error threshold in one interval.                               | `10`                    |
 | `--temp_threshold`   | Temperature threshold in Celsius.                                        | `80.0`                  |
 | `--interval`         | Interval in seconds between metric checks.                               | `10.0`                  |
-| `--log_file`         | Log file path.                                                           | `enhanced_system_monitor.log` |
+| `--log_file`         | Log file path.                                                           | `sysmonitor.log` |
 
 ## Dependencies
 
