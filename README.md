@@ -50,30 +50,3 @@ This script monitors various system metrics at regular intervals and detects ano
 ## Logging
 
 The script logs system metrics and detected anomalies to a rotating log file. The log file is configured to rotate when it reaches 5 MB, with up to 5 backup files.
-
-## Class: SystemMonitor
-
-### Attributes
-
--   [cpu_threshold](http://_vscodecontentref_/0) (*float*): CPU usage percentage threshold.
--   [memory_threshold](http://_vscodecontentref_/1) (*float*): Memory usage percentage threshold.
--   [load_multiplier](http://_vscodecontentref_/2) (*float*): Multiplier applied to CPU count to derive load average threshold.
--   [disk_io_threshold](http://_vscodecontentref_/3) (*int*): Disk I/O delta threshold in bytes.
--   [net_error_threshold](http://_vscodecontentref_/4) (*int*): Network error count threshold for delta.
--   [temp_threshold](http://_vscodecontentref_/5) (*float*): Temperature threshold in Celsius.
--   [interval](http://_vscodecontentref_/6) (*float*): Interval in seconds between metric checks.
--   [previous_metrics](http://_vscodecontentref_/7) (*Dict\[str, Optional\[float]]*): Storage for previous metric values to calculate deltas.
-
-### Methods
-
--   [__init__(self, cpu_threshold: float = 90.0, memory_threshold: float = 90.0, load_multiplier: float = 1.5, disk_io_threshold: int = 100 * 1024 * 1024, net_error_threshold: int = 10, temp_threshold: float = 80.0, interval: float = 10.0, log_file: str = "enhanced\_system\_monitor.log") -> None](http://_vscodecontentref_/8): Initializes the SystemMonitor with thresholds and logging configuration.
--   [_configure_logging(self, log_file: str) -> None](http://_vscodecontentref_/9): Configures logging with a rotating file handler.
--   [get_load_average(self) -> Optional[float]](http://_vscodecontentref_/10): Returns the system's 1-minute load average.
--   [get_temperatures(self) -> Dict[str, float]](http://_vscodecontentref_/11): Retrieves temperature readings from available sensors.
--   [log_system_metrics(self) -> None](http://_vscodecontentref_/12): Captures, analyzes, and logs system metrics along with any detected anomalies.
--   [run(self) -> None](http://_vscodecontentref_/13): Starts the continuous monitoring loop until interrupted.
-
-## Functions
-
--   [parse_arguments() -> argparse.Namespace](http://_vscodecontentref_/14): Parses command-line arguments to configure the system monitor.
--   [main() -> None](http://_vscodecontentref_/15): Entry point: parse arguments and start system monitoring.
